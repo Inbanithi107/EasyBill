@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1650.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techforge.easybill.Login">
+   <children>
+       <VBox alignment="CENTER" layoutX="-3.0" prefHeight="790.0" prefWidth="577.0" style="-fx-background-color: #1DA1F2; -fx-background-radius: 14;">
+           <Text fill="WHITE" style="-fx-fill: white;" text="Welcome to the EasyBill">
+            <font>
+               <Font name="Cooper Black" size="38.0" />
+            </font></Text>
+           <Text fill="white" text="An assistant for the shopkeeper to manage Accounts">
+            <font>
+               <Font name="Cooper Black" size="18.0" />
+            </font>
+            <VBox.margin>
+               <Insets top="50.0" />
+            </VBox.margin></Text>
+           <Text fill="WHITE" text="It offers seamless user experience with ease of billing service">
+            <font>
+               <Font name="Cooper Black" size="18.0" />
+            </font></Text>
+           <ImageView fx:id="imageview" fitHeight="311.0" fitWidth="508.0" pickOnBounds="true" preserveRatio="true">
+               <VBox.margin>
+                   <Insets top="50.0" />
+               </VBox.margin>
+           </ImageView>
+       </VBox>
+      <VBox alignment="CENTER" layoutX="577.0" layoutY="1.0" prefHeight="790.0" prefWidth="1074.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="466.0" prefWidth="1074.0">
+               <children>
+                  <Pane prefHeight="400.0" prefWidth="675.0" style="-fx-background-color: #1DA1F2; -fx-background-radius: 15;">
+                     <VBox.margin>
+                        <Insets left="200.0" right="200.0" />
+                     </VBox.margin>
+                      <children>
+                          <Text fill="WHITE" layoutX="252.0" layoutY="80.0" text="Login">
+                           <font>
+                              <Font name="Cooper Black" size="60.0" />
+                           </font></Text>
+                          <Text fill="WHITE" layoutX="112.0" layoutY="171.0" text="Username">
+                           <font>
+                              <Font name="Cooper Black" size="30.0" />
+                           </font></Text>
+                          <JFXTextField layoutX="337.0" layoutY="135.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font></JFXTextField>
+                        <Text fill="WHITE" layoutX="112.0" layoutY="257.0" text="Password">
+                           <font>
+                              <Font name="Cooper Black" size="30.0" />
+                           </font>
+                        </Text>
+                        <JFXTextField layoutX="337.0" layoutY="221.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
+                           <font>
+                              <Font name="System Bold" size="20.0" />
+                           </font>
+                        </JFXTextField>
+                          <JFXButton text="Login" />
+                      </children>
+                  </Pane>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
