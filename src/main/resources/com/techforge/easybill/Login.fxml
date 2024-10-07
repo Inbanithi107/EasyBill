@@ -47,7 +47,7 @@
                            <font>
                               <Font name="Cooper Black" size="30.0" />
                            </font></Text>
-                          <JFXTextField layoutX="337.0" layoutY="135.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
+                          <JFXTextField fx:id="username" layoutX="337.0" layoutY="135.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font></JFXTextField>
@@ -56,12 +56,15 @@
                               <Font name="Cooper Black" size="30.0" />
                            </font>
                         </Text>
-                        <JFXTextField layoutX="337.0" layoutY="221.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
+                        <JFXTextField fx:id="password" layoutX="337.0" layoutY="221.0" prefHeight="51.0" prefWidth="217.0" promptText="Enter" style="-fx-background-color: white;">
                            <font>
                               <Font name="System Bold" size="20.0" />
                            </font>
                         </JFXTextField>
-                          <JFXButton text="Login" />
+                          <JFXButton fx:id="signin" buttonType="RAISED" layoutX="274.0" layoutY="316.0" onAction="#login" prefHeight="44.0" prefWidth="126.0" style="-fx-background-color: white;" text="SignIn">
+                           <font>
+                              <Font name="Cooper Black" size="23.0" />
+                           </font></JFXButton>
                       </children>
                   </Pane>
                </children>
