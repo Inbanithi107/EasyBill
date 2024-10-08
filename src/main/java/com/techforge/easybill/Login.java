@@ -6,9 +6,14 @@ import com.techforge.easybill.Entity.GlobalUser;
 import com.techforge.easybill.Entity.User;
 import com.techforge.easybill.Source.SQLiteConnection;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -46,7 +51,15 @@ public class Login {
                 User user = new User(set.getString("username"), set.getString("password"), set.getString("email"));
                 GlobalUser globalUser = new GlobalUser(user);
             }
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("Home.fxml"));
+            Stage stage = new Stage();
+            Scene scene = new Scene(loader.load());
+            stage.setMaximized(true);
+            stage.setScene(scene);
+            stage.show();
         } catch (SQLException e) {
+            throw new RuntimeException(e);
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }

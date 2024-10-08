@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="750.0" prefWidth="1560.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techforge.easybill.Home">
+   <children>
+      <MenuBar layoutY="7.0" prefHeight="47.0" prefWidth="1570.0" style="-fx-padding: 25;" AnchorPane.topAnchor="-8.0">
+        <menus>
+          <Menu mnemonicParsing="false" style="-fx-text-fill: green;" text="Home" />
+          <Menu mnemonicParsing="false" text="Customer">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Add Customer" />
+                  <MenuItem mnemonicParsing="false" text="Edit Customer" />
+                  <MenuItem mnemonicParsing="false" text="Delete Customer" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Billing">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#billmain" text="New Bill" />
+                  <MenuItem mnemonicParsing="false" text="Edit Bill" />
+                  <MenuItem mnemonicParsing="false" text="Delete Bill" />
+                  <MenuItem mnemonicParsing="false" text="Non-Customer Bill" />
+                  <MenuItem mnemonicParsing="false" text="Challan Bill" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Product">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Add Product" />
+                  <MenuItem mnemonicParsing="false" text="Edit Product" />
+                  <MenuItem mnemonicParsing="false" text="Delete Product" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Stocks">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Add Stock" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Accounts">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Ledger" />
+                  <MenuItem mnemonicParsing="false" text="Reports" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

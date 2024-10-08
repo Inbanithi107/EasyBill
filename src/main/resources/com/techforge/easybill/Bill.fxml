@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="760.0" prefWidth="1650.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.techforge.easybill.Bill">
+   <children>
+       <VBox alignment="CENTER" prefHeight="59.0" prefWidth="1650.0" style="-fx-background-color: #1DA1F2;">
+           <Text fill="WHITE" text="INVOICE BILL">
+            <font>
+               <Font name="System Bold" size="45.0" />
+            </font></Text>
+       </VBox>
+       <HBox alignment="CENTER_LEFT" layoutY="60.0" prefHeight="100.0" prefWidth="553.0" style="-fx-background-color: gray;">
+           <Text fill="WHITE" text="Product Id" wrappingWidth="207.93750762939453">
+            <font>
+               <Font name="System Bold" size="35.0" />
+            </font>
+            <VBox.margin>
+               <Insets left="30.0" />
+            </VBox.margin>
+            <HBox.margin>
+               <Insets left="30.0" />
+            </HBox.margin></Text>
+           <JFXTextField fx:id="productid" prefHeight="52.0" prefWidth="309.0" promptText="Enter product id" style="-fx-background-color: white;">
+            <HBox.margin>
+               <Insets right="30.0" />
+            </HBox.margin>
+            <font>
+               <Font name="System Bold" size="26.0" />
+            </font></JFXTextField>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+       </HBox>
+      <TableView id="tableview" layoutY="160.0" prefHeight="376.0" prefWidth="1650.0">
+        <columns>
+          <TableColumn id="tableid" prefWidth="161.80000913143158" text="ID" />
+          <TableColumn id="tableitem" prefWidth="489.199951171875" text="ITEM NAME" />
+            <TableColumn id="tableqty" prefWidth="210.60003662109375" text="QTY" />
+            <TableColumn id="tableprice" prefWidth="210.60003662109375" text="PRICE" />
+            <TableColumn id="tablerate" prefWidth="210.60003662109375" text="RATE" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
