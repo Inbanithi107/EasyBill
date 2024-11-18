@@ -1,6 +1,9 @@
 package com.techforge.easybill.Entity;
 
+import com.google.gson.Gson;
+
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Bill {
@@ -15,7 +18,11 @@ public class Bill {
 
     private int rate;
 
-    private LocalDateTime datetime;
+
+    private String formateddatetime;
+
+
+    private static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss");
 
     public int getId() {
         return id;
@@ -57,12 +64,13 @@ public class Bill {
         this.rate = rate;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public void setDateTimeFromLocalDateTime(LocalDateTime dateTime) {
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy-HH:mm:ss");
+        this.formateddatetime = dateTime.format(formatter);
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
+    public String getDateTimeAsLocalDateTime() {
+        return formateddatetime;
     }
 
     public Bill(int id, int customerid, String admin, List<Product> products, int rate, LocalDateTime datetime) {
@@ -71,10 +79,17 @@ public class Bill {
         this.admin = admin;
         this.products = products;
         this.rate = rate;
-        this.datetime = datetime;
+
     }
 
     public Bill(){
 
     }
+
+    public String productTojson(){
+        Gson gson = new Gson();
+        return gson.toJson(products);
+    }
+
+
 }

@@ -6,7 +6,9 @@ public class Product {
 
     private String name;
 
-    private String Barcode;
+    private String barcode;
+
+    private int mrp;
 
     private int price;
 
@@ -27,11 +29,11 @@ public class Product {
     }
 
     public String getBarcode() {
-        return Barcode;
+        return barcode;
     }
 
     public void setBarcode(String barcode) {
-        Barcode = barcode;
+        this.barcode = barcode;
     }
 
     public int getPrice() {
@@ -42,11 +44,31 @@ public class Product {
         this.price = price;
     }
 
-    public Product(int id, String name, String barcode, int price) {
+    public int getMrp() {
+        return mrp;
+    }
+
+    public void setMrp(int mrp) {
+        this.mrp = mrp;
+    }
+
+    public Product(int id, String name, String barcode, int price, int mrp) {
         this.id = id;
         this.name = name;
-        Barcode = barcode;
+        barcode = barcode;
         this.price = price;
+        this.mrp = mrp;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", barcode='" + barcode + '\'' +
+                ", mrp=" + mrp +
+                ", price=" + price +
+                '}';
     }
 
     public Product(){

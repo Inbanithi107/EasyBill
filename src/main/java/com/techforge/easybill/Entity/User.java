@@ -1,6 +1,11 @@
 package com.techforge.easybill.Entity;
 
+
+
 public class User {
+
+
+    private long id;
 
     private String username;
 
@@ -32,6 +37,14 @@ public class User {
         this.email = email;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public User(String username, String password, String email) {
         this.username = username;
         this.password = password;
@@ -39,5 +52,6 @@ public class User {
     }
 
     public User() {
+
     }
 }
